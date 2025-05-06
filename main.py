@@ -4,7 +4,7 @@ import traceback
 from telegram import Update
 from telegram.ext import ApplicationBuilder, MessageHandler, ContextTypes, filters # type: ignore
 
-TOKEN = "7493471925:AAGbuzA-3s8QImQE1aLAxDCoS-b9yt3bj1A"
+TOKEN = os.getenv("TOKEN")
 
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     url = update.message.text
